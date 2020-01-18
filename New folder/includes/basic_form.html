@@ -1,0 +1,70 @@
+<form id="post_ad_form" action="post_ad.php" method="POST" enctype="multipart/form-data" class="post-ad-form">
+                        
+                        <div class="row">
+                            <p class="col-md-4">Ad Title:</p>
+                            <input type="text" id="searchword" name="searchword" class="col-md-8" palcehoder="your name"></input>
+                        </div>
+                        <div class="error-class"><label class="error-label"></label></div>
+                        
+                        <div class="row">
+                            <p class="col-md-4">Ad Category:</p>
+                              <select class="col-md-8" id="category" name="category">
+                        <?php                        
+                        $result = mysql_query("SELECT * FROM category ORDER BY cat_id = 0 asc, cat_id asc") or die();
+                        
+                        while ($row = mysql_fetch_array($result)) {
+                            echo '<option value="'.$row['cat_id'].'">'.$row['title'].'</option>';
+                        }
+                        ?>
+                              </select>
+                        </div>
+                        <div class="error-class"><label class="error-label"></label></div>
+
+                        <div class="row">
+                         <p class="col-md-4">Upload Ad:</p>
+                        <input class="col-md-8" type="file" name="image" id="image" />
+                        </div>
+                        <div class="error-class"><label class="error-label"></label></div>
+
+                       
+                        <div class="row">
+                         <p class="col-md-4">Person Name:</p>
+                        <input class="col-md-8" type="text" name="p_name" id="p_name" palcehoder="enter your name"/>
+                        </div>
+                        <div class="error-class"><label class="error-label"></label></div>
+
+                        <div class="row">
+                         <p class="col-md-4">Company Name:</p>
+                        <input class="col-md-8" type="text" name="c_name" id="c_name" palcehoder="enter company name"/>
+                        </div>
+                        <div class="error-class"><label class="error-label"></label></div>
+                        
+                        <div class="row">
+                            <p class="col-md-4">Email:</p>
+                            <input type="email" id="email" name="email" class="col-md-8" palcehoder="enter your email id"></input>
+                        </div>
+                        <div class="error-class"><label class="error-label"></label></div>
+                        
+                        <div class="terms_and_con">
+                        <p class="row">Terms & Conditions:<p>
+                            <div class="content">The ad posted does not contain any content which is illegal according to the Bahraini law or considered inappropriate in Bahraini culture.  The website reserves the right to decline or remove any advertising material  deemed unsuitable.
+                                </br>
+                                    I have read the terms and conditions and hereby agree to these entirely. I take full responsibly of the product advertised and will be solely responsible in any consequences arising therein.
+                                </br>
+                                    All information on this website is meant for your reference only and is not intended nor should it be construed as investment advice or solicitation for investment in any way. "Bahrain 360 Media & advertising spc" is the sole owner of www.aboutbh.com  and does not warrant or represent that the information provided here is complete, accurate and up-to-date. No liability will be accepted for any loss or damage arising from or in reliance upon the contents of this website.
+                                </br>
+                                This website may contain links to other independent third-party websites. These linked websites are provided solely as a convenience to our visitors. Such linked websites are not under "Bahrain 360 Media & Advertising spc" & www.aboutbh.com is not responsible for and does not endorse the content of such linked websites, including any information or materials contained on such linked websites. You will need to make your own independent judgment regarding your interaction with these linked websites.    
+                            </div>
+                            
+                            <div class="row checkbox-div">
+                                <input type="checkbox" id="accept" name="accept" value="accepted"/>
+                                <label  for="accept">I accept the above terms & conditions</label>
+                            </div>
+                            <div class="error-class"><label class="error-label"></label></div>
+                        </div>
+                         <div class="row">
+                            <div class="col-md-4"><div id="loadingImage" class="loadingImage"><img src="css/img/loading_icon.gif"/></div> </div>
+                            <button type="submit" value="upload_ad" class="submit_btn col-md-8 float-right">Submit</button>
+                        </div>
+                        <div id="success"></div>
+                        </form>

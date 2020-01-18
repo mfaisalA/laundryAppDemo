@@ -1,0 +1,128 @@
+/*ADMIN CSS*/
+body{
+	
+}
+span{
+	font-weight: normal;
+}
+
+h1,h2,h3,h4, label{
+	font-family: 'Raleway', sans-serif;
+}
+
+.no_style_link{
+	text-decoration: none;
+	color: inherit;
+}
+.no_style_link:hover{
+	text-decoration: none;
+}
+
+.navbar{
+	background: #2B3942;
+}
+
+.navbar .navbar-brand{
+	color: #ececec;
+	font-family: 'Raleway', sans-serif;
+
+}
+
+.navbar-inverse .navbar-nav>li>a{
+	color: #ececec;
+	font-family: 'Raleway', sans-serif; 	
+}
+
+#main{
+	min-height: 500px;
+	margin-top:50px;
+}
+
+.signin-box{
+	padding: 20px;
+	border: 1px solid #6688cc;
+	border-radius: 4px;
+	background: #6688ccdd;
+}
+
+.btn-add{
+	float: right;
+	margin: 12px 6px;
+	padding: 6px 12px;
+	font-weight: bold;
+}
+
+.brand-logo{
+	width: 40px;
+}
+
+.search_bar{
+	background: #26979E;
+	margin: 20px 0;
+	padding:20px;
+}
+
+.single_item{
+	text-decoration: none;
+	color: white;
+	background: #31585F;
+}
+
+.single_item a{
+	color: white;
+}
+
+.single_item:hover{
+	background: #2B3942;
+}
+
+.brand-logos > ul > li{
+	padding-top: 8px;
+}
+
+/*CSS OF SINGLE PAGE STARTS HERE*/
+.form-panel{
+	padding: 40px 60px;
+	background: #ececec;
+}
+
+.form-panel label{
+	margin-top: 10px;
+	font-weight: bold;
+}
+
+.side-panel{
+	background:#31585F;
+	color: #ececec;
+	text-align: center;
+	padding: 50px 0 60px 0;
+}
+
+.side-panel ul{
+	margin-top: 50px;
+}
+
+.side-panel h3{
+	margin-top: 50px;
+}
+
+.btn-submit-ap{
+	margin-top: 10px;
+	padding: 10px;
+	font-weight: bold;
+}
+
+/*CSS OF SINGLE PAGE ENDS HERE*/
+
+
+/*CSS OF FOOTER STARTS HERE*/
+footer{
+	padding: 20px;
+	background: #2B3942;
+	color: #ececec;
+}
+
+footer i{
+	padding: 0 4px;
+	color:#ececec;
+}
